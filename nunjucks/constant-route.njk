@@ -1,0 +1,14 @@
+import { routeMeta } from './meta';
+
+const routes = [{%for item in configs%}
+  {
+    name: '{{item.name}}',
+    path: '{{item.path}}',
+    component: () => import(/* webpackChunkName: '{{projectName}}/{{item.name}}' */'../view/{{item.name}}'),
+    meta: routeMeta["{{item.name}}"] || {}
+  }{%if loop.index < loop.length %},{%endif%}{%endfor%}
+];
+
+export {
+  routes
+};

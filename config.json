@@ -1,0 +1,26 @@
+[
+    {
+        "name": "order",
+        "path": "/order/:user"
+    },
+    {
+        "name": "buy",
+        "path": "/buy"
+    },
+    {
+        "name": "location",
+        "path": "/location"
+    },
+    {
+        "name": "test",
+        "path": "/test"
+    },
+    {
+        "name": "test",
+        "path": "/test/:params/:other"
+    },
+    {
+        "name": "testnew",
+        "path": "/testnew/:a/:b"
+    }
+]

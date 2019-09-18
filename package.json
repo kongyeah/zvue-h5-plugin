@@ -1,0 +1,64 @@
+{
+	"name": "zvue-h5-plugin",
+	"displayName": "zvue-h5-plugin",
+	"description": "vue项目h5模板插件",
+	"publisher": "cielkong",
+	"version": "0.0.5",
+	"engines": {
+		"vscode": "^1.35.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:menu.newView",
+		"onCommand:menu.newPeoject"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "menu.newView",
+				"title": "添加 view"
+			},
+			{
+				"command": "menu.newPeoject",
+				"title": "创建 project"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "menu.newView",
+					"when": "explorerResourceIsFolder"
+				},
+				{
+					"command": "menu.newPeoject",
+					"when": "explorerResourceIsFolder"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"@types/fs-extra": "^8.0.0",
+		"@types/glob": "^7.1.1",
+		"@types/nunjucks": "^3.1.1",
+		"fs-extra": "^8.1.0",
+		"glob": "^7.1.4",
+		"nunjucks": "^3.2.0"
+	}
+}

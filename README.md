@@ -18,6 +18,7 @@ vue项目的模板插件
 4. 添加成功
 
 ## 目录结构
+```
 ├── project                     单页项目
 │   ├── api
 │   │   ├── demo.js             各个单页的对应api文件
@@ -41,6 +42,7 @@ vue项目的模板插件
 │   ├── App.vue
 │   ├── main.js
 │   ├── router.js
+```
 
 ## ssr需要注意的代码
 route文件

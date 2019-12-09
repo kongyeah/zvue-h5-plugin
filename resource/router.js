@@ -1,30 +1,28 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import { routes } from './constant/route';
-import { routeMeta } from './constant/meta';
 
 Vue.use(Router);
 
-routes.push({
-  name: 'index',
-  path: '*',
-  redirect: {
-    name: 'demo',
-  }
+// 初始化路由并定义滚动行为
+const router = new Router({
+  mode: 'history',
+  base: '',
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    return savedPosition || { x: 0, y: 0 };
+  },
 });
 
-// 页面切换时
+// 页面切换时设置标题
 router.beforeEach((to, from, next) => {
+  const title = to.meta && to.meta.title;
+  setTimeout(() => {
+    document.title = title;
+  }, 300);
   next();
 });
 
-export function createRouter() {
-  return new Router({
-    mode: 'history',
-    base: '',
-    routes,
-    scrollBehavior(to, from, savedPosition) {
-      return savedPosition || { x: 0, y: 0 };
-    }
-  })
-}
+export {
+  router,
+};

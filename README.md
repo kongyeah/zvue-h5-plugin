@@ -10,18 +10,18 @@ vue项目的模板插件
 1. 在vue项目的pages文件夹右键 选择`‘创建 project’`
 2. 输入新建文件夹名
 3. 创建成功
+4. router.js中的base需要自定义
 
 ## 添加新路由view
 1. 在view文件夹右键 选择`'添加 view'`
 2. 输入新建文件夹名
 3. 输入新增路由需要的参数 不需要则直接回车
 4. 添加成功
+5. 添加页面meta需要手动写入
 
 ## 目录结构
 ```
 ├── project                     单页项目
-│   ├── api
-│   │   ├── demo.js             各个单页的对应api文件
 │   ├──common
 │   │   ├── filter.js           filter方法
 │   │   └── index.js            通用方法
@@ -35,13 +35,15 @@ vue项目的模板插件
 │   │   ├── common.js           公共store
 │   ├── view
 │   │   ├── demo                一个单页一个文件夹
-│   │   ├── components          组件
-│   │   ├── store
-│   │   │   ├── index.js
-│   │   ├── index.vue
+│   │   │   ├── api
+│   │   │   │   ├── index.js        api文件
+│   │   │   ├── components          组件
+│   │   │   ├── store
+│   │   │   │   ├── index.js
+│   │   │   └── index.vue
 │   ├── App.vue
 │   ├── main.js
-│   ├── router.js
+│   └── router.js
 ```
 
 ## ssr需要注意的代码

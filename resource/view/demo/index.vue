@@ -1,23 +1,18 @@
 <template>
-  <loading v-if="loading" />
+  
 </template>
 
 <script>
 import { mapState, mapGetters } from 'vuex';
-import Loading from './components/Loading';
 
 export default {
-  name: 'demo',
+  name: '##name##',
 
-  components: {
-    [Loading.name]: Loading
-  },
+  components: {},
 
   computed: {},
 
-  created() {},
-
-  mounted() {
+  mounted () {
     document.title = this.$route.meta.name || '';
   },
 

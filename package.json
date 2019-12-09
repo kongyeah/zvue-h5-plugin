@@ -3,7 +3,7 @@
 	"displayName": "zvue-h5-plugin",
 	"description": "vue项目h5模板插件",
 	"publisher": "cielkong",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"engines": {
 		"vscode": "^1.35.0"
 	},
